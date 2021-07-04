@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "build": "rm -rf dist && npx webpack"
+  },
   "dependencies": {
     "sass": "^1.35.1",
     "sass-loader": "^12.1.0",
