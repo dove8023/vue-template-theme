@@ -1,22 +1,25 @@
 <template>
   <div class="test">
     hello world
+    <HelloWorld />
   </div>
 </template>
 
 <script>
-
+import HelloWorld from "./components/HelloWorld.vue"
 export default {
-  components: {},
+  components: {
+    HelloWorld
+  },
   data() {
     return {};
   },
 };
 </script>
 
-<style>
+<style lang="scss">
 .test {
-  color: yellow;
+  color: $primary-color;
   font-size: 30px;
 }
 </style>
