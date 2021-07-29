@@ -5,11 +5,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 
 
-module.exports = [{
+module.exports = [
+    {
     mode: "development",
     target: "web",
     entry: {
-        blue: "./src/main.js",
+        blue: "./src/main-index.ts",
     },
     output: {
         path: path.resolve("./dist"),
@@ -48,15 +49,6 @@ module.exports = [{
                 path.resolve("./src")
             ],
             use: [
-                // {
-                //     loader: "file-loader",
-                // },
-                // {
-                //     loader: "extract-loader",
-                //     options: {
-                //         publicPath: path.resolve("./dist/css"),
-                //     }
-                // },
                 {
                     loader: MiniCssExtractPlugin.loader
                 },
@@ -69,6 +61,7 @@ module.exports = [{
                         additionalData: `@import "./src/assets/theme/blue.scss";`,
                     }
                 },
+                
             ]
         },
         ]
@@ -77,89 +70,109 @@ module.exports = [{
         new HtmlWebpackPlugin({
             template: "./public/index.html"
         }),
-        new VueLoaderPlugin(),
+        // new VueLoaderPlugin(),
         new MiniCssExtractPlugin({
-            filename: '[name].css',
+            filename: 'blue.css',
             insert: function (linkTag) {
                 console.log(123, linkTag);
             }
         }),
         new ModuleFederationPlugin({
-            name: "HOST",
+            name: "Template",
             filename: "remoteEntry.js",
-            exposes: {
-                exposeInit: "./src/main.js"
-            },
-            // shared: require("./package.json").dependencies,
+            // exposes: {
+            //     "exposeInit": "./src/exposeInit.ts"
+            // },
+            // shared: require("./package.json").dependencies
         }),
+
+        new VueLoaderPlugin()
     ]
 },
-    // {
-    //     mode: "development",
-    //     target: "web",
-    //     entry: {
-    //         red: "./src/main.js"
-    //     },
-    //     output: {
-    //         path: path.resolve("./dist"),
-    //         filename: "[name].js"
-    //     },
-    //     optimization: {
-    //         minimize: false
-    //     },
-    //     module: {
-    //         rules: [{
-    //             test: /\.vue$/,
-    //             include: [
-    //                 path.resolve("./src"),
-    //             ],
-    //             use: {
-    //                 loader: "vue-loader"
-    //             }
-    //         },
 
-    //         {
-    //             test: /\.(s)?css$/,
-    //             include: [
-    //                 path.resolve("./src")
-    //             ],
-    //             use: [
-    //                 // {
-    //                 //     loader: "file-loader",
-    //                 // },
-    //                 // {
-    //                 //     loader: "extract-loader",
-    //                 //     options: {
-    //                 //         publicPath: path.resolve("./dist/css"),
-    //                 //     }
-    //                 // },
-    //                 {
-    //                     loader: MiniCssExtractPlugin.loader
-    //                 },
-    //                 {
-    //                     loader: "css-loader"
-    //                 },
-    //                 {
-    //                     loader: "sass-loader",
-    //                     options: {
-    //                         additionalData: `@import "./src/assets/theme/red.scss";`,
-    //                     }
-    //                 },
-    //             ]
-    //         },
-    //         ]
-    //     },
-    //     plugins: [
-    //         new HtmlWebpackPlugin({
-    //             template: "./public/index.html"
-    //         }),
-    //         new VueLoaderPlugin(),
-    //         new MiniCssExtractPlugin({
-    //             filename: '[name].css',
-    //             insert(linkTag) {
-    //                 console.log(123, linkTag);
-    //             }
-    //         })
-    //     ]
-    // }
+
+
+{
+    mode: "development",
+    target: "web",
+    entry: {
+        blue: "./src/main-index.ts",
+    },
+    output: {
+        path: path.resolve("./dist"),
+        filename: "[name].js"
+    },
+    optimization: {
+        minimize: false
+    },
+    resolve: {
+        extensions: [".ts", ".js", ".tsx"]
+    },
+    module: {
+        rules: [{
+            test: /\.vue$/,
+            include: [
+                path.resolve("./src"),
+            ],
+            use: {
+                loader: "vue-loader"
+            }
+        },
+
+        {
+            test: /\.tsx?$/,
+            include: [
+                path.resolve("./src")
+            ],
+            use: [{
+                loader: "ts-loader"
+            }]
+        },
+
+        {
+            test: /\.(s)?css$/,
+            include: [
+                path.resolve("./src")
+            ],
+            use: [
+                {
+                    loader: MiniCssExtractPlugin.loader
+                },
+                {
+                    loader: "css-loader"
+                },
+                {
+                    loader: "sass-loader",
+                    options: {
+                        additionalData: `@import "./src/assets/theme/red.scss";`,
+                    }
+                },
+                
+            ]
+        },
+        ]
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: "./public/index.html"
+        }),
+        // new VueLoaderPlugin(),
+        new MiniCssExtractPlugin({
+            filename: 'red.css',
+            insert: function (linkTag) {
+                console.log(123, linkTag);
+            }
+        }),
+        new ModuleFederationPlugin({
+            name: "Template",
+            filename: "remoteEntry.js",
+            // exposes: {
+            //     "exposeInit": "./src/exposeInit.ts"
+            // },
+            // shared: require("./package.json").dependencies
+        }),
+
+        new VueLoaderPlugin()
+    ]
+},
 ]

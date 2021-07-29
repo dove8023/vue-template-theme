@@ -1,15 +1,20 @@
 <template>
-  <div class="test">
-    hello world
-    <HelloWorld />
+  <div>
+    <h1 class="test">
+      hello world
+      <br>
+      <router-link to="/a">AA</router-link>
+      <router-link to="/b">BB</router-link>
+      <router-link to="/hello">Hello</router-link>
+    </h1>
+    
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
 export default {
   components: {
-    HelloWorld,
   },
   data() {
     return {};
