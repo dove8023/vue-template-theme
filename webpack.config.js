@@ -3,7 +3,10 @@ const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
-
+const dotenv = require("dotenv-webpack");
+let environmentVariables = new dotenv({
+    systemvars: true
+})
 
 module.exports = [
     {
@@ -14,23 +17,31 @@ module.exports = [
     },
     output: {
         path: path.resolve("./dist"),
-        filename: "[name].js"
+        filename: "[name].js",
+        assetModuleFilename: 'images/[hash][ext][query]',
     },
     optimization: {
         minimize: false
     },
     resolve: {
-        extensions: [".ts", ".js", ".tsx"]
+        extensions: [".ts", ".js", ".tsx", ".vue"],
+        alias: {
+            "@": path.resolve(__dirname, "./src"),
+        }
     },
+    
     module: {
         rules: [{
             test: /\.vue$/,
             include: [
                 path.resolve("./src"),
             ],
-            use: {
-                loader: "vue-loader"
-            }
+            loader: "vue-loader",
+        },
+
+        {
+            test: /\.(png|jpg|gif|woff2|woff|ttf|svg)/,
+            type: 'asset/resource',
         },
 
         {
@@ -39,18 +50,21 @@ module.exports = [
                 path.resolve("./src")
             ],
             use: [{
-                loader: "ts-loader"
+                loader: "ts-loader",
             }]
         },
-
         {
-            test: /\.(s)?css$/,
+            test: /\.scss$/,
             include: [
-                path.resolve("./src")
+                path.resolve("./src"),
+                path.resolve("./node_modules")
             ],
             use: [
                 {
-                    loader: MiniCssExtractPlugin.loader
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                        esModule: false
+                    }
                 },
                 {
                     loader: "css-loader"
@@ -62,6 +76,22 @@ module.exports = [
                     }
                 },
                 
+            ]
+        },
+
+        {
+            test: /\.css$/,
+            include: [
+                path.resolve("./src"),
+                path.resolve("./node_modules")
+            ],
+            use: [
+                {
+                    loader: MiniCssExtractPlugin.loader
+                },
+                {
+                    loader: "css-loader"
+                },
             ]
         },
         ]
@@ -90,7 +120,8 @@ module.exports = [
             // shared: require("./package.json").dependencies
         }),
 
-        new VueLoaderPlugin()
+        new VueLoaderPlugin(),
+        environmentVariables
     ]
 },
 

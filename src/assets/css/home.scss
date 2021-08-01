@@ -1,0 +1,48 @@
+.home-container {
+    .home-main-container {
+        position: relative;
+        z-index: 1001;
+        height: 100%;
+        // padding-top: 64px;
+        height: calc(100% - 64px);
+        padding-top: 0;
+    }
+    .home-layout-container {
+        height: 100%;
+        overflow: hidden;
+        &>.fix-left {
+            height: 100%;
+            overflow: hidden;
+            border-top: 1px solid #2c2c2e;
+            transition: width 0.8s;
+        }
+        .navigation-module {
+            position: relative;
+            height: 100%;
+            padding-top: 8px;
+            padding-bottom: 32px;
+            overflow: auto;
+            background-color: #fff;
+            border-top: 1px solid #39414e;
+            .menu-icon {
+                position: fixed;
+                bottom: 16px;
+                // left: 219px;
+                left: 168px;
+                z-index: 1;
+                transition: all 1s;
+            }
+        }
+        &>.auto-right {
+            height: 100%;
+            overflow: hidden;
+        }
+    }
+    .gs-scrollbar-view {
+        height: 100%;
+    }
+    .main-module {
+        height: 100%;
+        padding: 0 0 10px 14px !important;
+    }
+}

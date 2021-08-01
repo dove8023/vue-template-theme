@@ -1,0 +1,132 @@
+body{
+  .role-contain {
+    .role-contain-heade-setting {
+      margin-bottom: 8px ;
+      padding:0 ;
+      .header-setting-search {
+        float: right;
+      }
+    }
+  }
+  
+}
+.add-role-modal {
+  .add-role-modal-edit-warning {
+    height: 32px;
+
+    font-size: 12px;
+    line-height: 32px;
+    color: #FFB524;
+    background: rgba(255, 247, 233, 1);
+    border-radius: 3px;
+    box-shadow: 0 4px 12px 0 rgba(0, 11, 43, .2);
+
+    .add-role-modal-edit-warning-icon {
+      width: 12px;
+      height: 12px;
+      margin-left: 16px;
+      vertical-align: middle;
+    }
+  }
+
+  .addform {
+    margin-top: 17px;
+  }
+
+  .gs-modal-body {
+    padding-right: 32px;
+    padding-left: 16px;
+  }
+
+  .gs-collapse-item-header {
+    justify-content: start;
+
+    span {
+      margin-right: 8px;
+    }
+  }
+}
+
+.view-authority-modal {
+  color: #666;
+
+  .view-authority-modal-text {
+    margin-bottom: 45px;
+    color: #666;
+
+    span {
+      font-size: 12px;
+    }
+
+    p {
+      margin-top: 9px;
+      font-size: 14px;
+    }
+  }
+
+  .view-authority-modal-authority-section {
+    margin-top: 9px;
+    margin-bottom: 22px;
+
+    .view-authority-modal-authority-section-box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      margin-top: 7px;
+      font-size: 12px;
+      line-height: 40px;
+      background: rgba(250, 250, 250, 1);
+      border-radius: 3px ;
+
+      span {
+        margin-right: 64px;
+        margin-left: 16px;
+        font-family: Microsoft YaHei;
+        font-size: 12px;
+        font-weight: 400;
+        color: rgba(86, 128, 249, 1);
+      }
+    }
+  }
+}
+
+.authority-setting {
+  .authority-setting-tip {
+    font-size: 12px;
+    color: #000;
+    opacity: .45;
+  }
+
+  .gs-collapse-item-header {
+    padding: 0;
+
+    &:hover {
+      background-color: #FFF;
+    }
+  }
+
+  .gs-collapse {
+    border: 0;
+  }
+
+  .gs-collapse-item {
+    border: 0;
+  }
+
+  .gs-collapse-item-content {
+    background-color: #FAFAFA;
+  }
+
+  .gs-checkbox {
+    margin-top: 14px;
+  }
+}
+
+.deny-delete-tip {
+  font-size: 12px;
+  color: #C5C5C5;
+}
+
+.font-size-small {
+  font-size: 12px;
+}

@@ -1,0 +1,43 @@
+.user-group-member-setting {
+  height: 100%;
+
+  .user-group-member-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 38px);
+    padding: 0 24px;
+
+    .desc-header-wrap {
+      flex: 0;
+
+      .desc-item-wrap {
+        margin-top: 16px;
+        font-size: 12px;
+        line-height: 16px;
+        color: #000;
+
+        span {
+          display: inline-block;
+          margin-right: 48px;
+        }
+      }
+
+      .header-wrap {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 0;
+      }
+    }
+
+    .user-table {
+      flex: 1;
+      overflow: auto;
+
+      >div {
+        height: calc(100% - 60px);
+        padding-bottom: 16px;
+      }
+    }
+  }
+}

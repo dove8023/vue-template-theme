@@ -1,0 +1,83 @@
+.home-decision-container {
+    .decision-main-container {
+        padding: 8px;
+        background-color: #FFF;
+        border-radius: 3px;
+        //box-shadow: 0 -1px 32px -4px #939393;
+    }
+    .module-title {
+        margin-bottom: 16px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .template-container {
+        background-color: #FFF;
+    }
+}
+
+.decision-container {
+    &>.fix-left-auto-right-container {
+        height: 100%;
+        &>.auto-right {
+            height: 100%;
+            overflow: hidden;
+        }
+    }
+    .decision-list-container {
+        height: 100%;
+        padding: 16px;
+        overflow: auto;
+        border-left: 1px solid #EEE;
+    }
+}
+
+.template-container {
+    position: relative;
+    .return-title {
+        padding: 12px 0;
+        overflow: hidden;
+    }
+    .return-btn {
+        float: left;
+        height: 36px;
+        padding: 0 8px;
+    }
+    .return-label {
+        margin-left: 40px;
+        color: #666;
+        h2 {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20px;
+        }
+        h3 {
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+    .template-main-container {
+        position: absolute;
+        top: 58px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        background: #FFF;
+        border-radius: 3px;
+        .fix-right-auto-left-container {
+            height: 100%;
+            overflow: hidden;
+        }
+        .fix-right {
+            height: 100%;
+            overflow: hidden;
+        }
+        .template-list {
+            height: 100%;
+            overflow: auto;
+        }
+    }
+    .preview-img {
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,45 @@
+.pointer {
+  cursor: pointer;
+}
+
+.is-bold {
+  font-weight: bold;
+}
+
+.primary-text {
+  color: $primary-text;
+}
+
+.white-text {
+  color: #fff;
+}
+
+.blue {
+  color: $primary-text;
+}
+
+.info {
+  color: #909399;
+}
+
+.warning {
+  color: #e6a23c;
+}
+
+.error {
+  color: #f00;
+}
+
+.danger {
+  color: #f56c6c;
+}
+
+.success {
+  color: #67c23a;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

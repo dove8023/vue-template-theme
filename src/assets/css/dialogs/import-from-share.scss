@@ -1,0 +1,33 @@
+.import-from-share {
+  .comment {
+    display: flex;
+    padding: 2px 0;
+    font-size: 12px;
+    line-height: 22px;
+    background-color: #eef2fe;
+    border: 1px solid #d8e2fe;
+    border-radius: 3px;
+
+    i {
+      padding: 4px 8px;
+      font-size: 14px;
+      color: $small-text-color;
+    }
+
+    p {
+      flex: 1;
+    }
+  }
+
+  .choose {
+    margin-top: 24px;
+  }
+
+  .input-file {
+    display: none;
+  }
+
+  .import {
+    margin: 24px 0 0;
+  }
+}

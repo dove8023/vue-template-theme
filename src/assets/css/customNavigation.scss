@@ -1,0 +1,80 @@
+.home-container {
+  .hide-header-sidebar {
+    .custom-header-container {
+      display: none;
+    }
+
+    .home-main-container {
+      padding-top: 0 !important;
+
+      .main-module {
+        padding: 0;
+      }
+    }
+  }
+}
+
+body .gs-menus {
+  overflow: hidden;
+  background-color: transparent;
+
+  .iconfont-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-right: 18px;
+
+    .iconfont {
+      font-size: 18px;
+    }
+  }
+
+  .gs-menus-item {
+    position: relative;
+    margin: 15px 0;
+    text-align: left !important;
+
+    &-link {
+      position: relative;
+      display: flex;
+      height: 40px;
+      padding-right: 32px;
+      cursor: pointer;
+
+      &:link {
+        text-decoration: none;
+      }
+
+      a {
+        display: block;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        color: #666;
+        text-decoration: none;
+      }
+    }
+
+    &.is-active:not(.is-open) {
+      .gs-menus-item-link a {
+        color: $primary-color;
+      }
+    }
+
+    .gs-menus-item {
+      .gs-menus-item-link {
+        padding-left: 67px !important;
+      }
+    }
+  
+    [class^="gs-icon"] {
+      margin-top: 3px;
+      margin-right: 16px;
+      text-align: center;
+    }
+  }
+
+  
+}

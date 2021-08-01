@@ -1,0 +1,128 @@
+.home-manage-dictionary-container {
+  height: 100%;
+  overflow: hidden;
+}
+
+.manage-dictionary-container {
+  height: 100%;
+  padding: 0 16px 8px;
+  background: #FFF;
+
+  .gs-tabs,
+  .gs-tab-pane {
+    height: 100%;
+  }
+
+  .gs-tabs-header {
+    border-bottom-color: #ECECEC;
+  }
+
+  .gs-tabs-content {
+    height: calc(100% - 46px);
+  }
+
+  .gs-tabs-item {
+    padding-top: 4px;
+  }
+
+  .dictionary-container {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .opr-container {
+    margin-bottom: 16px;
+
+    .gs-button {
+      padding: 0 16px;
+    }
+  }
+
+  .group-wrap {
+    position: relative;
+    height: calc(100% - 44px);
+    padding: 8px 16px 16px;
+    overflow: auto;
+    background-color: #F7F7F7;
+    border-radius: 2px;
+
+    .gs-tag {
+      height: 28px;
+      margin-top: 8px;
+      margin-right: 8px;
+      line-height: 28px;
+      color: #666;
+      background: #ECECEC;
+      border: 0;
+      border-radius: 14px;
+    }
+
+    .gs-tag-label {
+      line-height: 28px;
+    }
+  }
+
+  .no-data,
+  .no-group-data {
+    height: 400px;
+    line-height: 400px;
+    color: #DDD;
+    text-align: center;
+  }
+
+  .synonyms-group-wrap {
+    height: calc(100% - 56px);
+    overflow: auto;
+  }
+
+  .synonyms-container {
+    position: relative;
+
+    .gs-input-icon {
+      width: 54px;
+    }
+
+    .opr-container {
+      margin-bottom: 28px;
+    }
+
+    .group-wrap {
+      min-height: 112px;
+      padding: 16px 16px 24px;
+      margin-top: 24px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    .gs-tag {
+      position: relative;
+    }
+
+    .tag-group-title {
+      margin-bottom: 16px;
+      color: #333;
+    }
+
+    .gs-tag-close {
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      width: 18px;
+      height: 18px;
+      padding: 3px;
+      margin-top: -4px;
+      line-height: 10px;
+      color: #FFF;
+      text-align: center;
+      background-color: #666;
+      border-radius: 9px;
+    }
+
+    .no-data {
+      height: 40px;
+      line-height: 40px;
+    }
+  }
+}

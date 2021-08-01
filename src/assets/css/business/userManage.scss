@@ -1,0 +1,104 @@
+.user-management-block-contain {
+    margin-top: 18%;
+    text-align: center;
+    .no-user {
+        width: 55px;
+        height: auto;
+    }
+    p {
+        margin-top: 15px;
+    }
+    section {
+        margin-top: 15px;
+        .block-contain-btn {
+            margin-left: 20px;
+        }
+    }
+}
+
+.user-management-contain {
+    .header-setting {
+        margin: 16px 0;
+        .header-setting-search {
+            float: right;
+        }
+    }
+    .user-tabel {
+        min-width: 960px;
+        padding-bottom: 16px;
+        .gs-table-tag {
+            height: 29px;
+            padding: 8px;
+            margin-top: 5px;
+            font-size: 12px;
+            line-height: 14px;
+            color: $small-text-color;
+            background-color: rgba(86, 128, 249, 0.2);
+            border: 0;
+            border-radius: 3px;
+            margin-left: 4px;
+        }
+        .gs-table-tag-circle {
+            width: 26px;
+            height: 26px;
+            margin-top: 5px;
+            line-height: 6px;
+            color: $small-text-color;
+            background: rgba(86, 128, 249, .2);
+            border-radius: 50%;
+        }
+    }
+}
+
+.user-delete-user-model {
+    font-size: 12px;
+    .delete-user-model-tip-sec {
+        color: #C5C5C5;
+    }
+}
+
+.reset-pw-model {
+    .reset-pw-model-tip-fir {
+        font-family: Microsoft YaHei;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 60px;
+        color: rgba(102, 102, 102, 1);
+    }
+    .reset-pw-model-tip-sec {
+        font-family: Microsoft YaHei;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 60px;
+        color: rgba(197, 197, 197, 1);
+    }
+}
+
+.gs-table-tags-popper {
+    .gs-table-tag {
+        height: 29px;
+        padding: 8px;
+        margin-top: 10px;
+        font-size: 12px;
+        line-height: 12px;
+        color: $small-text-color;
+        background-color: rgba(86, 128, 249, .2);
+        border: 0;
+        border-radius: 3px;
+    }
+}
+
+.view-member-modal-table {
+    margin-top: 24px;
+    .gs-table-tag {
+        height: 29px;
+        padding: 8px;
+        margin-top: 10px;
+        font-size: 12px;
+        line-height: 12px;
+        color: $small-text-color;
+        background-color: rgba(86, 128, 249, .2);
+        border: 0;
+        border-radius: 3px;
+    }
+}

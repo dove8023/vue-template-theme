@@ -1,0 +1,54 @@
+.float-left,
+.pull-left {
+    float: left;
+}
+
+.float-right,
+.pull-right {
+    float: right;
+}
+
+.clearfix {
+    &::before,
+    &::after {
+        display: table; // 2
+        content: " "; // 1
+    }
+    &::after {
+        clear: both;
+    }
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.rel-pos {
+    position: relative;
+}
+
+.abs-pos {
+    position: absolute;
+}
+
+.display-inline-block {
+    display: inline-block;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

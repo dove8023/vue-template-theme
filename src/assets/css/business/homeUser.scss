@@ -1,0 +1,203 @@
+.home-user-container {
+    .query-main-container {
+        padding-top: 0;
+        background-color: transparent;
+        border-radius: 0;
+    }
+    .user-main-container {
+        height: 100%;
+    }
+    .top-container,
+    .bottom-container {
+        background-color: #FFF;
+    }
+    .top-container {
+        height: 144px;
+    }
+    .bottom-container {
+        height: calc(100% - 160px);
+        padding: 16px 24px 24px;
+        margin-top: 16px;
+    }
+    .left-main-info {
+        width: 264px;
+        margin: 32px 24px;
+    }
+    .profile-wrapper {
+        margin-right: 24px;
+    }
+    .profile-img {
+        width: 80px;
+        height: 80px;
+        border: 2px solid #6BC2F5;
+        border-radius: 50%;
+    }
+    .download-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 78px;
+        height: 18px;
+        padding: 0 16px 0 8px;
+        font-size: 12px;
+        font-style: normal;
+        line-height: 18px;
+        color: #FFF;
+        background-image: linear-gradient(90deg, #29B2FD 5%, #127BFA 94%);
+        border-radius: 11px;
+    }
+    .download-count {
+        float: right;
+    }
+    .basic-info-wrapper {
+        width: 160px;
+        margin-top: 16px;
+        font-size: 12px;
+        color: #666;
+    }
+    .name,
+    .contact-name {
+        display: inline-block;
+        width: 48px;
+        margin-right: 16px;
+    }
+    .name {
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 16px;
+    }
+    .title,
+    .contact-name,
+    .contact-value {
+        line-height: 12px;
+    }
+    .right-count-info {
+        width: calc(100% - 352px);
+        margin-top: 40px;
+    }
+    .count-item {
+        width: calc((100% - 64px)/5);
+        height: 64px;
+        margin-right: 16px;
+        font-size: 12px;
+        color: #888;
+        text-align: center;
+        background: rgba(74, 144, 226, .06);
+        border-radius: 2px;
+    }
+    .count-item:last-child {
+        margin-right: 0;
+    }
+    .count-value {
+        padding: 0 8px;
+        margin: 0 auto;
+        overflow: hidden;
+        font-size: 22px;
+        line-height: 40px;
+        color: $primary-color;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .count-name {
+        line-height: 16px;
+    }
+    .gs-tabs {
+        height: 100%;
+    }
+    .gs-tabs-header {
+        border-bottom-color: rgba(0, 0, 0, .09);
+    }
+    .gs-tabs-item {
+        height: 19px;
+        margin-right: 24px;
+        margin-bottom: 8px;
+        font-size: 14px;
+        line-height: 19px;
+        color: #666;
+        &.is-active {
+            color: #333;
+        }
+    }
+    .gs-tabs-nav-next,
+    .gs-tabs-nav-prev {
+        line-height: 28px;
+    }
+    .gs-tabs-content {
+        height: calc(100% - 28px);
+        padding: 24px 0 0;
+        .tab-item {
+            height: 100%;
+            overflow: auto;
+        }
+    }
+    .gs-table {
+        th {
+            height: 38px;
+            background: #FAFAFA;
+            border-radius: 4px 4px 0 0;
+            .cell {
+                color: #333;
+            }
+        }
+        td,
+        th {
+            [class*="gs-button-text"] {
+                height: 38px;
+                line-height: 38px;
+            }
+        }
+        .cell {
+            height: 38px;
+            font-size: 12px;
+            line-height: 38px;
+            color: #666;
+        }
+        .table-options {
+            &.gs-button {
+                color: $primary-color;
+            }
+        }
+        .img-column {
+            padding-right: 0;
+        }
+    }
+    .file-type-icon {
+        display: inline-block;
+        width: 19px;
+        height: 20px;
+        margin-top: 9px;
+        vertical-align: middle;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    h5 {
+        margin-bottom: 16px;
+        font-size: 14px;
+        font-weight: 700;
+        color: #666;
+    }
+    $icons1: "csv",
+    "excel",
+    "gif",
+    "jpg",
+    "pdf",
+    "png",
+    "powerpoint",
+    "word";
+    @each $icon in $icons1 {
+        .gs-icon-#{$icon} {
+            background: url("../images/icons/#{$icon}.png") no-repeat;
+            background-size: contain;
+        }
+    }
+    .gs-tab-pane:nth-child(2),
+    .gs-tab-pane:nth-child(3),
+    .gs-tab-pane:nth-child(5) {
+        .gs-table {
+            th:first-child,
+            td:first-child {
+                padding-right: 0;
+            }
+        }
+    }
+}

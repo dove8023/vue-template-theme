@@ -1,0 +1,27 @@
+.dialog-custom {
+  .gs-modal-close {
+    top: 24px;
+
+    .gs-icon-close {
+      width: 14px;
+      height: 14px;
+      font-size: 14px;
+    }
+  }
+
+  .gs-modal-header {
+    padding: 16px 0 0;
+    color: #000;
+    border: 0;
+  }
+
+  .gs-modal-content {
+    width: 544px;
+  }
+
+  .gs-modal-footer {
+    .gs-button {
+      padding: 0 28px;
+    }
+  }
+}

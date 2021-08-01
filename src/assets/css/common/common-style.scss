@@ -1,0 +1,102 @@
+.gs-modal-box-content {
+    font-size: 14px;
+}
+
+.gs-modal-box-icon {
+    &.gs-icon-info-circle {
+        display: none;
+    }
+}
+
+
+/* 配置全局样式 */
+
+.gs-modal {
+    &.custom-style {
+        .gs-modal-close {
+            top: 24px;
+        }
+        .gs-modal-header {
+            height: 16px;
+            margin-top: 24px;
+            line-height: 16px;
+            // border-bottom-width: 0;
+        }
+    }
+}
+
+.gs-table {
+    /* 设置行高 */
+    .gs-table-header,
+    .gs-table-body {
+        th,
+        td {
+            height: 48px;
+            .cell {
+                height: 48px;
+                min-height: 48px;
+                line-height: 48px;
+            }
+        }
+    }
+   
+    /* 设置头部颜色 */
+    .gs-table-footer-wrapper,
+    .gs-table-header,
+    .gs-table-header-wrapper {
+        thead {
+            th {
+                background-color: #f9fafc;
+            }
+        }
+    }
+    /* 设置斑马纹颜色 */
+    .gs-table-striped {
+        .gs-table-body {
+            .gs-table-row--striped {
+                td {
+                    background-color: #f9fafc;
+                }
+            }
+        }
+    }
+    /* 斑马纹去除下边框 */
+    // &.gs-table-striped {
+    //   th,
+    //   td {
+    //     border-bottom-width: 0;
+    //   }
+    // }
+}
+
+
+/* gs-tables去掉斑马纹表格下边框 */
+/* gs-tables 统一表头字体大小*/
+body{
+    .gs-tables {
+        .gs-tables-main {
+            &.gs-tables-main-head {
+               border-bottom-width: 1px ;
+                .gs-tables-title-content{
+                    font-size: 14px ;
+                }
+               
+            }
+        }
+        // .gs-tables-row-stripe {
+        //   th,
+        //   td {
+        //     border-bottom-width: 0;
+        //   }
+        // }
+    }
+    /* gs-tables 统一表体字体大小*/
+    .gs-tables-data-content,.name-link{
+        font-size: 14px 
+    }
+    
+}
+// 自定义高亮文字背景色
+.custom-gs-highlight {
+    background-color: #feff00;
+}

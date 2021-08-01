@@ -1,0 +1,91 @@
+.module-layout-container {
+    position: relative;
+    .sit-map-title {
+        margin: 10px 0;
+        width: 650px;
+        height: 36px;
+        padding: 0;
+        font-size: 16px !important;
+        font-weight: 700;
+        line-height: 36px;
+        display: flex;
+        justify-content: space-between;
+        color: rgba(0, 0, 0, 0.85);
+        // .total-numbers {
+        //   min-width: 210px;
+        //   display: flex;
+        //   justify-content: space-between;
+        //   align-content: center;
+        //   font-size: 12px;
+        //   font-weight: normal;
+        // }
+        span {
+            padding: 0 0 0 8px;
+        }
+    }
+    .content-style {
+        float: right;
+        margin-top: 4px;
+        .button-group {
+            display: none;
+            vertical-align: middle;
+        }
+        .gs-button {
+            float: left;
+            width: 37px;
+            height: 28px;
+            padding: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .gs-button+.gs-button {
+            margin-left: 0;
+            border-radius: 0 3px 3px 0;
+        }
+    }
+    .content-layout-container {
+        // position: absolute;
+        // top: 41px;
+        // right: 0;
+        // bottom: 0;
+        // left: 0;
+        padding: 0 !important;
+        overflow: auto;
+        background-color: #fff;
+        border-radius: 2px;
+        // box-shadow: 0 0 8px 3px rgba(219, 226, 245, 0.3);
+        &.customer {
+            top: 0;
+            box-shadow: 0 0 0 0 #fff;
+            .search-content {
+                text-align: left;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+.data-source-management {
+    padding: 10px;
+}
+
+.collector-management {
+    padding: 10px;
+}
+
+.home-query-container {
+    .query-module-container {
+        padding: 10px;
+    }
+}
+
+.role-contain {
+    padding: 10px;
+}
+
+.user-group-contain {
+    padding: 10px;
+}
+
+#app .content-box-fullscreen{
+    height: calc(100vh - 130px);
+}

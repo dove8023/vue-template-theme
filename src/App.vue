@@ -1,30 +1,35 @@
 <template>
-  <div>
-    <h1 class="test">
-      hello world
-      <br>
-      <router-link to="/a">AA</router-link>
-      <router-link to="/b">BB</router-link>
-      <router-link to="/hello">Hello</router-link>
-    </h1>
-    
-    <router-view></router-view>
-  </div>
+    <div id="app">
+        <router-view />
+    </div>
 </template>
-
 <script>
-export default {
-  components: {
-  },
-  data() {
-    return {};
-  },
-};
-</script>
+import Vue from "vue";
 
-<style lang="scss">
-.test {
-  color: $primary-color;
-  font-size: 30px;
+export default Vue.extend({
+    mounted(){
+        console.log("mounted");
+    }
+});
+</script>
+<style lang="scss" scoped>
+#app {
+  color: #2c3e50;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>

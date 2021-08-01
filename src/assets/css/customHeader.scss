@@ -1,0 +1,114 @@
+.custom-header-container {
+  .gs-header {
+    z-index: 1000;
+    height: auto;
+    overflow: visible;
+    background: $header-bg;
+    box-shadow: none;
+    display: flex;
+    justify-content: space-between;
+
+    .gs-menu-toggler {
+      width: 51px;
+      height: 64px;
+      line-height: 64px;
+      background: $primary-bg;
+    }
+
+    .gs-header-nav {
+      .custom-header-backup {
+        margin-right: 24px;
+        font-family: "MicrosoftYaHei";
+        font-size: 16px;
+        color: rgba(255, 255, 255, 1);
+        cursor: pointer;
+      }
+
+      .nav-border {
+        width: 36px;
+        height: 64px;
+        background: $primary-bg;
+
+        div {
+          border-color: $header-bg $primary-bg $primary-bg $header-bg;
+          border-width: 32px 18px;
+        }
+      }
+
+      .gs-special-nav {
+        height: 64px;
+        padding: 0 16px;
+        background: $primary-bg;
+
+        ul {
+          li {
+            margin: 0 8px;
+            line-height: 64px;
+          }
+        }
+      }
+    }
+
+    .gsum-logo {
+      position: relative;
+      top: 0;
+    }
+
+    .gs-tooltip-content {
+      width: 40px;
+    }
+  }
+}
+
+.custom-header-left-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .custom-header-home-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+    line-height: normal;
+
+    .custom-header-icon-home {
+      flex-shrink: 0;
+      font-size: 21px;
+      font-weight: normal;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .jiangefu {
+      display: inline-block;
+      height: 17px;
+      margin: 0 16px;
+      font-size: 17px;
+      line-height: 17px;
+      color: #b6bcca;
+    }
+
+    .jiangefu-wide {
+      display: inline-block;
+      height: 17px;
+      margin: 0 24px;
+      font-size: 17px;
+      line-height: 14px;
+    }
+  }
+
+
+
+  .custom-header-logo {
+    display: flex;
+    align-items: center;
+    width: 271px;
+    height: 65px;
+    padding-left: 4px;
+
+    img {
+      max-height: 40px;
+    }
+  }
+}

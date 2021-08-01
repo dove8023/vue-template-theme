@@ -1,0 +1,51 @@
+.tenant-manage-contain {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  .header-wrap {
+    display: flex;
+    flex: 0;
+    justify-content: space-between;
+    padding: 16px 0;
+
+    .type-select {
+      .gs-select-wrap {
+        width: 90px;
+      }
+    }
+  }
+
+  .user-table {
+    flex: 1;
+    overflow: auto;
+
+    >.user-table-content {
+      height: calc(100% - 60px);
+    }
+  }
+}
+
+/* 新建租户对话框 */
+.custom-add-tenant-dialog {
+  .drop-down-select {
+    display: inline-block;
+    width: auto;
+
+    .label-desc {
+      color: #798998;
+      opacity: .6;
+    }
+
+    .gs-select-wrap {
+      border: 0;
+
+      &.is-focus:not(.is-disabled),
+      &:focus:not(.is-disabled),
+      &:hover:not(.is-disabled) {
+        box-shadow: none;
+      }
+    }
+  }
+}

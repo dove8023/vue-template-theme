@@ -1,0 +1,348 @@
+// 头部、左侧、底部工具栏样式
+.toolbar-top {
+    position: absolute;
+    z-index: 10;
+    margin: 16px;
+    // margin: 0 16px 16px;
+    .gs-search {
+        width: 246px;
+        .gs-input-icon {
+            width: 54px;
+        }
+    }
+    .gs-input-group-prepend {
+        position: absolute;
+        right: 48px;
+        padding: 0;
+        border-left: 0 none;
+        .clear-btn {
+            padding: 0;
+            border: 0 none;
+        }
+        .gs-icon-close-circle {
+            padding: 5px 4px;
+            color: #666;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: background-color .2s;
+            &:hover {
+                background-color: #EEE;
+            }
+        }
+    }
+    ul {
+        li {
+            float: right;
+            margin-left: 8px;
+            color: rgba(39, 61, 82, .5);
+            &.text {
+                line-height: 28px;
+            }
+        }
+    }
+    .advanced-search-btn {
+        margin-left: 8px;
+        padding: 8px;
+        font-size: 12px;
+        color: $small-text-color;
+        background: rgba(255, 255, 255, .9);
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, .15);
+        border-radius: 2px;
+        i {
+            float: right;
+            font-size: 12px;
+            transition: transform .3s;
+        }
+        [class*="gs-icon"]+.gs-button-label {
+            margin: 0 8px 0 0;
+        }
+    }
+    .advanced-search-btn-clicked {
+        i {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.set-style {
+    .set-label {
+        float: left;
+        width: 50px;
+        margin-right: 3px;
+        line-height: 30px;
+    }
+    .gs-button {
+        line-height: 30px;
+    }
+    .set-color {
+        margin: 16px 0;
+        ul {
+            float: left;
+            height: 16px;
+            padding: 8px 0;
+            line-height: 16px;
+            li {
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                margin-right: 8px;
+                cursor: pointer;
+                border-radius: 50%;
+                &:hover {
+                    opacity: .8;
+                }
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .set-size {
+        margin: 0 0 16px 0;
+        ul {
+            float: left;
+            li {
+                display: inline-block;
+                margin-right: 5px;
+                vertical-align: middle;
+                cursor: pointer;
+                background-color: #7F7F7F;
+                border-radius: 50%;
+                &:hover {
+                    opacity: .8;
+                }
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+.toolbar-left {
+    position: absolute;
+    top: 72px;
+    left: 38px;
+    z-index: 3;
+    cursor: pointer;
+    li {
+        width: 34px;
+        height: 34px;
+        padding: 0 8px;
+        margin-bottom: 8px;
+        line-height: 34px;
+        color: #000;
+        background-color: #D4DEF7;
+        border-radius: 17px;
+        // transition: width .2s ease .1s;
+        .svg-icon {
+            float: left;
+            margin: 8px 16px 0 0;
+        }
+        b {
+            display: none;
+            float: left;
+        }
+        &:hover {
+            width: 124px;
+            color: #FFF;
+            background-color: $primary-bg;
+            b {
+                display: block;
+            }
+        }
+    }
+}
+
+.toolbar-layout {
+    position: absolute;
+    top: 64px;
+    right: 32px;
+    z-index: 3;
+    opacity: .8;
+    .gs-button {
+        font-size: 16px;
+    }
+}
+
+.graph-info-bar {
+    width: 410px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.toolbar-right {
+    position: fixed;
+    top: 100px;
+    right: 0;
+    bottom: 10px;
+    z-index: 10;
+}
+
+.custom-drawer-wrapper {
+    position: relative;
+    z-index: 12;
+    float: right;
+    height: 100%;
+    background-color: #FFF;
+    transform: translateX(0, 180px);
+    box-shadow: -2px 0 4px 0 rgba(0, 0, 0, .1);
+    transition: transform .3s cubic-bezier(.7, .3, .1, 1);
+}
+
+.toolbar-tabs {
+    position: relative;
+    z-index: 11;
+    float: right;
+    width: 50px;
+    margin: 16px 0 0;
+    text-align: right;
+    vertical-align: top;
+    $icons: "create-node", "create-rel", "batch-import", "set-style", "filter", "delete", "cypher-search", "import", "export";
+    @each $icon in $icons {
+        .icon-#{$icon} {
+            position: relative;
+            display: inline-block;
+            background-image: url("../images/icons/icon_#{$icon}.png");
+        }
+        li:hover,
+        .active {
+            .icon-#{$icon} {
+                background-image: url("../images/icons/icon_#{$icon}-h.png");
+            }
+        }
+    }
+    .icon-create-node {
+        top: 10px;
+        width: 18px;
+        height: 18px;
+    }
+    .icon-create-rel {
+        top: 12px;
+        width: 16px;
+        height: 16px;
+    }
+    .icon-batch-import {
+        top: 14px;
+        width: 18px;
+        height: 15px;
+    }
+    .icon-set-style {
+        top: 12px;
+        width: 17px;
+        height: 17px;
+    }
+    .icon-filter {
+        top: 14px;
+        width: 13px;
+        height: 15px;
+    }
+    .icon-delete {
+        top: 10px;
+        width: 18px;
+        height: 18px;
+    }
+    .icon-cypher-search {
+        top: 10px;
+        width: 17px;
+        height: 17px;
+    }
+    .icon-import {
+        top: 12px;
+        width: 17px;
+        height: 16px;
+    }
+    .icon-export {
+        top: 12px;
+        width: 17px;
+        height: 16px;
+    }
+    li {
+        float: right;
+        width: 50px;
+        height: 40px;
+        margin: 0 0 8px;
+        font-size: 12px;
+        line-height: 1;
+        color: #333;
+        text-align: center;
+        cursor: pointer;
+        background-color: #FAFAFA;
+        border: 1px solid #F0F0F0;
+        border-right: 0;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, .2);
+        border-radius: 5px 0 0 5px;
+        .sp-fill-li {
+            display: inline-block;
+            width: 50px;
+            height: 40px;
+        }
+        &:hover,
+        &.active {
+            background: $small-text-color;
+        }
+    }
+}
+
+.tool-button-wrap {
+    position: relative;
+    z-index: 11;
+    float: right;
+    margin: 20px 32px 0 0;
+    text-align: right;
+    vertical-align: top;
+    li {
+        float: left;
+        margin-left: 8px;
+    }
+    .gs-button {
+        width: 23px;
+        height: 23px;
+        padding: 0;
+        text-align: center;
+        border-radius: 50%;
+        .gs-button-label {
+            top: -3px;
+        }
+        &:hover {
+            background: $small-text-color;
+            .icon-fullscreen {
+                background-image: url("../images/icons/icon_full-screen-h.png");
+            }
+            .icon-exitFullscreen {
+                background-image: url("../images/icons/icon_exit-full-screen-h.png");
+            }
+            .icon-lock {
+                background-image: url("../images/icons/icon_lock-h.png");
+            }
+            .icon-unlock {
+                background-image: url("../images/icons/icon_unlock-h.png");
+            }
+            .icon-export {
+                background-image: url("../images/icons/icon_download-h.png");
+            }
+        }
+    }
+    .icon-fullscreen,
+    .icon-exitFullscreen,
+    .icon-lock,
+    .icon-unlock,
+    .icon-export {
+        display: inline-block;
+        width: 9px;
+        height: 9px;
+        background-image: url("../images/icons/icon_full-screen.png");
+    }
+    .icon-exitFullscreen {
+        background-image: url("../images/icons/icon_exit-full-screen.png");
+    }
+    .icon-lock {
+        background-image: url("../images/icons/icon_lock.png");
+    }
+    .icon-unlock {
+        background-image: url("../images/icons/icon_unlock.png");
+    }
+    .icon-export {
+        background-image: url("../images/icons/icon_download.png");
+    }
+}

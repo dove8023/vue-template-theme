@@ -1,0 +1,15 @@
+$font-path: "~@gs-ui/gs-ui/components/icon/";
+
+/* 导入默认主题样式 */
+@import "~@gs-ui/gs-ui/components/themes/style";
+
+@import "./base/base";
+@import "./common/common";
+@import "./customHeader.scss";
+@import "./customNavigation.scss";
+@import "./moduleLayout.scss";
+@import "./tenantHome.scss";
+@import "./dialogs/dialog-index.scss";
+@import "./home.scss";
+@import "./login.scss";
+@import "./business"

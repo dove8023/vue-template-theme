@@ -1,0 +1,227 @@
+.home-map-container {
+    height: 100%;
+    h2 {
+        margin-top: 13px;
+        margin-bottom: 16px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #666;
+    }
+    h3 {
+        margin-bottom: 8px;
+        color: #666;
+    }
+    .description {
+        margin-bottom: 20px;
+        font-size: 12px;
+        color: #999;
+    }
+    .home-map {
+        // height: calc(100% - 58px);
+        overflow-y: scroll;
+    }
+    .panel {
+        padding: 16px;
+        background: #FFF;
+    }
+    .left {
+        float: left;
+        width: calc(100% - 312px);
+    }
+    .right {
+        float: right;
+        width: 296px;
+        h3 {
+            font-size: 14px;
+            font-weight: bold;
+            color: #666;
+        }
+    }
+    .doc-detail {
+        margin-bottom: 16px;
+    }
+    .box {
+        margin-bottom: 16px;
+        li {
+            display: inline-block;
+            width: 133px;
+            height: 64px;
+            padding-top: 4px;
+            margin-right: 16px;
+            text-align: center;
+            background: rgba(74, 144, 226, .06);
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        b {
+            display: block;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 30px;
+            color: $primary-color;
+        }
+        span {
+            font-size: 12px;
+            color: #888;
+        }
+    }
+    .order-box {
+        margin-top: 27px;
+    }
+    .tit {
+        position: relative;
+        height: 22px;
+        line-height: 22px;
+        .line {
+            position: absolute;
+            top: 11px;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 1px;
+            background: rgba(0, 0, 0, .09);
+        }
+        span {
+            position: absolute;
+            left: 16px;
+            z-index: 2;
+            padding: 0 4px;
+            font-size: 12px;
+            color: #666;
+            background: #FFF;
+        }
+    }
+    .order-list {
+        margin-top: 16px;
+        font-size: 12px;
+        li {
+            margin-bottom: 14px;
+        }
+        .order {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            color: #FFF;
+            text-align: center;
+            background: #D3D8DF;
+            border-radius: 3px;
+        }
+        .order-first {
+            background: $primary-color;
+        }
+        .order-second {
+            background: $primary-color;
+            opacity: .7;
+        }
+        .order-three {
+            background: $primary-color;
+            opacity: .5;
+        }
+        .name {
+            display: inline-block;
+            width: 150px;
+            margin-left: 10px;
+        }
+        .score {
+            display: inline-block;
+            width: 60px;
+            text-align: right;
+        }
+    }
+    .map-table {
+        float: left;
+        width: calc(100% - 328px);
+    }
+    .node-num {
+        float: left;
+        width: 312px;
+        padding: 0 8px;
+        margin-left: 16px;
+        border: 1px solid #ECECEC;
+        h4 {
+            margin: 10px 0 24px;
+        }
+        li {
+            margin-bottom: 16px;
+            &:last-child {
+                margin-bottom: 39px;
+            }
+            b {
+                display: inline-block;
+                width: 50px;
+                font-weight: normal;
+                text-align: right;
+            }
+            span {
+                display: inline-block;
+                height: 16px;
+                padding: 0 4px;
+                margin-left: 8px;
+                font-size: 12px;
+                line-height: 16px;
+                color: #FFF;
+                text-align: right;
+                background: #4C9DEE;
+            }
+        }
+    }
+    /*===================== 重写table部分样式 ==========================*/
+    .gs-table {
+        .cell {
+            line-height: 38px;
+        }
+        th {
+            height: 38px;
+        }
+    }
+    .gs-table-header-wrapper {
+        thead {
+            div {
+                font-size: 12px;
+                color: #333;
+            }
+            th {
+                background-color: #FAFAFA;
+            }
+        }
+    }
+    .gs-table-fixed-header-wrapper {
+        thead {
+            div {
+                background-color: #FAFAFA;
+            }
+        }
+    }
+    .gs-table-body-wrapper {
+        width: 102%;
+    }
+    .progress {
+        li {
+            display: inline-block;
+            width: 14px;
+            height: 6px;
+            background: #D8D8D8;
+        }
+    }
+    .progress-red {
+        .one {
+            background-image: -webkit-linear-gradient(0deg, #FF9E4D, #FF1900);
+        }
+    }
+    .progress-blue {
+        .one {
+            background-image: -webkit-linear-gradient(0deg, #6CFFED, #3F56FF);
+        }
+    }
+     ::-webkit-scrollbar {
+        width: 6px;
+        height: 2px;
+        background-color: #FFF;
+    }
+    /*定义滑块 内阴影+圆角*/
+     ::-webkit-scrollbar-thumb {
+        background-color: #D6D6D6;
+        border-radius: 10px;
+    }
+}
