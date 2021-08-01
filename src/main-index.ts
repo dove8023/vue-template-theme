@@ -10,9 +10,6 @@ import kmpInit from "./kmp"
 import "@/assets/icon/iconfont.css"
 import "@/assets/css/index.scss"
 
-import "./config"
-
-
 
 Vue.config.productionTip = false
 

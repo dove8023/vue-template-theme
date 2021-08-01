@@ -2,7 +2,8 @@
  * 开发环境配置
  */
 console.log("开发环境 master 配置: ");
-(function(epApp) {
+(function() {
+    let epApp = {};
 
     const configs = {
 
@@ -37,10 +38,10 @@ console.log("开发环境 master 配置: ");
 
     epApp.configs = configs;
     epApp.API_URL_DOMAIN = "http://dev-kg.gridsum.com/gateway";
-    this.epApp = epApp;
+    window.epApp = epApp;
 
     document.title = configs.title || "勘探开发知识成果共享与协同研究平台";
-}(window));
+}());
 
 
 
