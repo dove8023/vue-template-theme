@@ -1,1 +1,1 @@
-import("./main-index")
+import("./entry")

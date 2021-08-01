@@ -10,7 +10,7 @@ module.exports = [
     mode: "development",
     target: "web",
     entry: {
-        blue: "./src/main-index.ts",
+        blue: path.resolve("./src/entry"),
     },
     output: {
         path: path.resolve("./dist"),
@@ -20,7 +20,10 @@ module.exports = [
         minimize: false
     },
     resolve: {
-        extensions: [".ts", ".js", ".tsx"]
+        extensions: [".ts", ".js", ".tsx", ".vue"],
+        alias: {
+            "@": path.resolve(__dirname, "./src"),
+        }
     },
     module: {
         rules: [{
@@ -81,14 +84,14 @@ module.exports = [
             // }
 
         }),
-        new ModuleFederationPlugin({
-            name: "Template",
-            filename: "remoteEntry.js",
-            // exposes: {
-            //     "exposeInit": "./src/exposeInit.ts"
-            // },
-            // shared: require("./package.json").dependencies
-        }),
+        // new ModuleFederationPlugin({
+        //     name: "Template",
+        //     filename: "remoteEntry.js",
+        //     // exposes: {
+        //     //     "exposeInit": "./src/exposeInit.ts"
+        //     // },
+        //     // shared: require("./package.json").dependencies
+        // }),
 
         new VueLoaderPlugin()
     ]

@@ -1,5 +1,5 @@
 import VueRouter from "vue-router";
-import A from "./view/a.vue"
+import A from "@/view/a.vue"
 import B from "./view/b.vue"
 import Hello from "./components/HelloWorld.vue"
 
@@ -8,8 +8,8 @@ const router = new VueRouter({
         {
             name: "AAA",
             path: "/a",
-            component: ()=>import("./view/a.vue")
-            // component: A
+            // component: ()=>import("./view/a.vue")
+            component: A
         },
         {
             name: "BBB",

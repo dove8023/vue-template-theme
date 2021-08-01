@@ -1,11 +1,16 @@
 <template>
-  <h1 class="aa">AAAAAAAAA</h1>
+  <h1 class="aa" @click="hello">AAAAAAAAA</h1>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
 
-}
+@Component
+export default class Abb extends Vue {
+  hello(){
+    alert("hello");
+  }
+} 
 </script>
 
 <style scoped lang="scss">
