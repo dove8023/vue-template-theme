@@ -11,7 +11,7 @@ module.exports = [
     target: "web",
     entry: {
         blue: path.resolve("./src/main"),
-        assetModuleFilename: path.resolve("dist/image")
+        // assetModuleFilename: 'dist/images/[hash][ext][query]',
     },
     output: {
         path: path.resolve("./dist"),
@@ -39,7 +39,7 @@ module.exports = [
 
         {
             test: /\.(png|svg|jpg|jpeg|gif)$/i,
-            type: 'asset/resource',
+            // type: 'asset/resource',
         },
 
         // {
