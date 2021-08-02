@@ -50,6 +50,7 @@ module.exports = [
                 path.resolve("./src")
             ],
             use: [{
+                loader: "babel-loader",
                 loader: "ts-loader",
             }]
         },
@@ -101,7 +102,6 @@ module.exports = [
             template: "./public/index.html",
             hash: true,
         }),
-        // new VueLoaderPlugin(),
         new MiniCssExtractPlugin({
             filename: '[name].css',
             chunkFilename: '[id].css',
@@ -120,7 +120,7 @@ module.exports = [
             // shared: require("./package.json").dependencies
         }),
 
-        new VueLoaderPlugin(),
+        // new VueLoaderPlugin(),
         environmentVariables
     ]
 },
