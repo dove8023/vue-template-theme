@@ -3,12 +3,13 @@
     <h1 class="test">
       hello world
       <br>
-      <router-link to="/a">AA</router-link>
+      <img src="@/assets/logo.png" alt="logo">
+      <!-- <router-link to="/a">AA</router-link>
       <router-link to="/b">BB</router-link>
-      <router-link to="/hello">Hello</router-link>
+      <router-link to="/hello">Hello</router-link> -->
     </h1>
     
-    <router-view></router-view>
+    <!-- <router-view></router-view> -->
   </div>
 </template>
 

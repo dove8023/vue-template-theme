@@ -10,7 +10,8 @@ module.exports = [
     mode: "development",
     target: "web",
     entry: {
-        blue: path.resolve("./src/entry"),
+        blue: path.resolve("./src/main"),
+        assetModuleFilename: path.resolve("dist/image")
     },
     output: {
         path: path.resolve("./dist"),
@@ -37,14 +38,19 @@ module.exports = [
         },
 
         {
-            test: /\.tsx?$/,
-            include: [
-                path.resolve("./src")
-            ],
-            use: [{
-                loader: "ts-loader"
-            }]
+            test: /\.(png|svg|jpg|jpeg|gif)$/i,
+            type: 'asset/resource',
         },
+
+        // {
+        //     test: /\.tsx?$/,
+        //     include: [
+        //         path.resolve("./src")
+        //     ],
+        //     use: [{
+        //         loader: "ts-loader"
+        //     }]
+        // },
 
         {
             test: /\.(s)?css$/,
@@ -74,14 +80,13 @@ module.exports = [
             template: "./public/index.html",
             hash: true,
         }),
-        // new VueLoaderPlugin(),
         new MiniCssExtractPlugin({
             filename: '[name].css',
             chunkFilename: '[id].css',
 
-            // insert: function (linkTag) {
-            //     console.log(123, linkTag);
-            // }
+            insert: function (linkTag) {
+                console.log(12345, linkTag);
+            }
 
         }),
         // new ModuleFederationPlugin({

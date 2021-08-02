@@ -7,8 +7,6 @@
     "build": "rm -rf dist && npx webpack"
   },
   "dependencies": {
-    "@gridsum/kmp-web-sdk": "^0.0.3",
-    "@gs-ui/gs-ui": "^2.10.17",
     "axios": "^0.20.0",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-plugin-transform-vue-jsx": "^3.7.0",
