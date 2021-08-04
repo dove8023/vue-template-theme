@@ -3,20 +3,22 @@
     <h1 class="test">
       hello world
       <br>
-      <img src="@/assets/logo.png" alt="logo">
-      <!-- <router-link to="/a">AA</router-link>
+      <img class="logo" src="@/assets/logo.png" alt="logo">
+      <hr>
+      
+      <router-link to="/a">AA</router-link>
       <router-link to="/b">BB</router-link>
-      <router-link to="/hello">Hello</router-link> -->
+      <router-link to="/hello">Hello</router-link>
     </h1>
     
-    <!-- <router-view></router-view> -->
+    <router-view></router-view>
   </div>
 </template>
 
-<script>
+<script lang="ts">
+
 export default {
-  components: {
-  },
+  components: {  },
   data() {
     return {};
   },
@@ -27,5 +29,9 @@ export default {
 .test {
   color: $primary-color;
   font-size: 30px;
+}
+.logo{
+  width: 100px;
+  height: 100px;
 }
 </style>

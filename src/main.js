@@ -1,13 +1,17 @@
 import Vue from "vue";
 import App from "./App.vue";
 import "./assets/css/index.css";
-// import router from "./router"
-// import VueRouter from "vue-router";
+import router from "./router"
+import VueRouter from "vue-router";
 
-// Vue.use(VueRouter)
+import a from "./test"
+console.log(a);
+
+
+Vue.use(VueRouter)
 
 new Vue({
-    // router,
+    router,
     render(h) {
         return h(App);
     }

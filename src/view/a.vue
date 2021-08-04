@@ -1,16 +1,21 @@
 <template>
-  <h1 class="aa" @click="hello">AAAAAAAAA</h1>
+  <div>
+    <h1 class="aa" @click="hello">AAAAAAAAABBBBBB</h1>
+    <p>{{ok}}</p>
+  </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 
-@Component
-export default class Abb extends Vue {
-  hello(){
+// @Component
+
+export default class Good extends Vue{
+  public ok = "ok man. Good here.";
+  public hello(){
     alert("hello");
   }
-} 
+};
 </script>
 
 <style scoped lang="scss">
